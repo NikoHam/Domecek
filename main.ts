@@ -24,7 +24,7 @@ hazard = 0
 // ALARMY
 // 
 basic.forever(function () {
-    if (smarthome.crashSensor()) {
+    if (input.pinIsPressed(TouchPin.P0)) {
         while (alarm != 4) {
             music.startMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.Once)
             hazard = 0
